@@ -11,14 +11,15 @@
     <script>
       const csvUrl =
         "https://gist.githubusercontent.com/anibalmgr/11ae839ceadc301edf073bfe048b09cd/raw/21f5c61761cc4c4bd71c9ab6a91ac9e3835f290e/css-colours.csv";
-
-      async function fetchText(url) {
+      const fetchURL = async (url) => {
         const response = await fetch(url);
-        const text = await response.text();
-        console.log(text);
-      }
+        return await response.text();
+      };
 
-      fetchText(csvUrl);
+      fetchURL(csvUrl).then((text) => {
+        console.log(text);
+      });
+
       //   fetch(url).then((response) => {
       //     response.text().then((text) => console.log(text));
       //   });

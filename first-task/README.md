@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and cleaned to have a simple boilerplate.
 
+## current moment
+
+[Data Visualization with D3, JavaScript, React](https://youtu.be/2LhoCfjm8R4?t=8942)
+
 ## Available Scripts
 
 In the project directory, you can run:
