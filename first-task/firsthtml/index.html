@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=1280, initial-scale=1.0" />
+    <title>Covid Data</title>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
+  </head>
+  <body>
+    <script>
+      const csvUrl =
+        "https://gist.githubusercontent.com/anibalmgr/11ae839ceadc301edf073bfe048b09cd/raw/21f5c61761cc4c4bd71c9ab6a91ac9e3835f290e/css-colours.csv";
+
+      async function fetchText(url) {
+        const response = await fetch(url);
+        const text = await response.text();
+        console.log(text);
+      }
+
+      fetchText(csvUrl);
+      //   fetch(url).then((response) => {
+      //     response.text().then((text) => console.log(text));
+      //   });
+    </script>
+  </body>
+</html>
