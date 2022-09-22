@@ -4,7 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## current moment
 
-[Data Visualization with D3, JavaScript, React](https://youtu.be/2LhoCfjm8R4?t=11973)
+[Data Visualization with D3, JavaScript, React](https://youtu.be/2LhoCfjm8R4?t=12955)
+[finish this](https://vizhub.com/curran/7392ee124c8249b884e735abf6da8df4?edit=files&file=bundle.js)
 
 ## Available Scripts
 
