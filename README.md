@@ -4,8 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## current moment
 
-[Data Visualization with D3, JavaScript, React](https://youtu.be/2LhoCfjm8R4?t=12955)
-[finish this](https://vizhub.com/curran/7392ee124c8249b884e735abf6da8df4?edit=files&file=bundle.js)
+[Data Visualization with D3, JavaScript, React](https://youtu.be/2LhoCfjm8R4?t=16085)
+
+# Some none React tasks:
+
+[VizHub](https://vizhub.com/anibalmgr/19dc66a5ecf745fca04c93c73d13ab4f?edit=files&file=viz.js)
 
 ## Available Scripts
 
@@ -49,3 +52,22 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Notes from the videos
+
+Three different types of data: Categorical, Ordinal and nominal
+
+### Marks and channels:
+
+- marks
+  - Point
+  - line
+  - Area
+- Channels:
+  - Position
+  - Colour
+    - Hue
+    - Saturation
+    - Luminance
+  - Size
+  - Shape
