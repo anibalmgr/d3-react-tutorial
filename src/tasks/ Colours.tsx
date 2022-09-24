@@ -34,13 +34,16 @@ export default function Colours() {
   }
 
   const pieArc: DefaultArcObject | any = arc()
-    .innerRadius(0)
-    .outerRadius(width);
+    .innerRadius(10 + center.y / 2)
+    .outerRadius(10 + center.x / 4);
 
   const colourPie = pie<any>().value(1);
 
   return (
-    <div className="flex flex-wrap w-full h-full" onMouseMove={handleMouse}>
+    <div
+      className="flex flex-wrap w-full h-full cursor-none"
+      onMouseMove={handleMouse}
+    >
       <svg className="w-full h-full">
         <g transform={`translate(${center.x},${center.y})`}>
           {data.map((d, i) => (
