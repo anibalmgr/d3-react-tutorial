@@ -1,4 +1,4 @@
-import { arc, csv, DefaultArcObject, DSVRowString } from "d3";
+import { arc, color, csv, DefaultArcObject, DSVRowString, pie } from "d3";
 import { MouseEvent, useEffect, useState } from "react";
 
 const width = 550;
@@ -37,6 +37,8 @@ export default function Colours() {
     .innerRadius(0)
     .outerRadius(width);
 
+  const colourPie = pie<any>().value(1);
+
   return (
     <div className="flex flex-wrap w-full h-full" onMouseMove={handleMouse}>
       <svg className="w-full h-full">
@@ -51,6 +53,13 @@ export default function Colours() {
                 endAngle:
                   ((i + 1) / data.length) * (1.8 + center.y / 4000) * Math.PI,
               })}
+            />
+          ))}
+          {colourPie(data).map((d) => (
+            <path
+              className="opacity-50"
+              fill={d.data["RGB hex value"]}
+              d={pieArc(d)}
             />
           ))}
         </g>
