@@ -1,4 +1,4 @@
-import { arc, color, csv, DefaultArcObject, DSVRowString, pie } from "d3";
+import { arc, csv, DefaultArcObject, DSVRowString, pie } from "d3";
 import { MouseEvent, useEffect, useState } from "react";
 
 const width = 550;
