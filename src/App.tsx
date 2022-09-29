@@ -1,10 +1,10 @@
 import SmileyFaces from "tasks/SmileyFaces";
 import { useState } from "react";
 import CovidChart from "tasks/CovidChart";
-import { VegaLiteApi } from "tasks/VegaLiteAPI/VegaLiteAPI";
+import Colours from "tasks/ Colours";
 
 export default function App() {
-  const tasks = ["face", "covid chart", "vega lite API"];
+  const tasks = ["face", "colours", "covid chart"];
   const [task, setTask] = useState(tasks[0]);
 
   function TopMenu() {
@@ -32,8 +32,8 @@ export default function App() {
       <h1 className="text-4xl font-semibold">Hello simple world</h1>
       <TopMenu />
       {task === tasks[0] && <SmileyFaces />}
-      {task === tasks[1] && <CovidChart />}
-      {task === tasks[2] && <VegaLiteApi />}
+      {task === tasks[1] && <Colours />}
+      {task === tasks[2] && <CovidChart />}
     </div>
   );
 }
