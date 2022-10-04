@@ -58,8 +58,9 @@ export default function Colours() {
               })}
             />
           ))}
-          {colourPie(data).map((d) => (
+          {colourPie(data).map((d, i) => (
             <path
+              key={i}
               className="opacity-50"
               fill={d.data["RGB hex value"]}
               d={pieArc(d)}
