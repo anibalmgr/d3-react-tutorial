@@ -1,12 +1,11 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Eye from "./Eye";
 import Mouth from "./Mouth";
 import BackgroundCircle from "./BackgroundCircle";
 import { FaceContainer } from "./FaceContainer";
+import { MousePosition } from "App";
 
-type MousePosition = { x: number; y: number };
-
-export default function SmileyFace() {
+export default function SmileyFace({ mouse }: { mouse: MousePosition }) {
   const [eyeOffset, setEyeOffset] = useState({ x: 100, y: -80 });
 
   const width = 450;
@@ -24,11 +23,13 @@ export default function SmileyFace() {
     [setEyeOffset]
   );
 
+  useEffect(
+    () => mouseHandler({ x: mouse.x, y: mouse.y }),
+    [mouse, mouseHandler]
+  );
+
   return (
-    <div
-      className="w-max h-full"
-      onMouseMove={(e: any) => mouseHandler({ x: e.clientX, y: e.clientY })}
-    >
+    <div className="w-max h-min">
       <FaceContainer
         width={width}
         height={height}
