@@ -4,6 +4,7 @@ import CovidChart from "tasks/CovidChart";
 import Colours from "tasks/ Colours";
 import BarChart from "tasks/barChart/BarChart";
 import ScatterPlot from "tasks/scatterPlot/ScatterPlot";
+import LineChart from "tasks/lineChart/LineChart";
 
 export interface MousePosition {
   x: number;
@@ -11,7 +12,14 @@ export interface MousePosition {
 }
 
 export default function App() {
-  const tasks = ["face", "colours", "covid chart", "bar chart", "scatter plot"];
+  const tasks = [
+    "face",
+    "colours",
+    "covid chart",
+    "bar chart",
+    "scatter plot",
+    "line chart",
+  ];
   const [task, setTask] = useState(tasks[0]);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
@@ -51,6 +59,7 @@ export default function App() {
       {task === tasks[2] && <CovidChart />}
       {task === tasks[3] && <BarChart />}
       {task === tasks[4] && <ScatterPlot />}
+      {task === tasks[5] && <LineChart />}
     </div>
   );
 }

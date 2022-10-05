@@ -1,3 +1,8 @@
+export interface TempType {
+  temperature: number;
+  timestamp: Date;
+}
+
 export interface IrisType {
   sepal_length: number;
   sepal_width: number;
