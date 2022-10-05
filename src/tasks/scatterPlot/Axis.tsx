@@ -10,13 +10,17 @@ export function AxisBottom({ xScale, innerHeight, tickFormat }: Props) {
   return (
     <>
       {xScale.ticks().map((tickValue) => (
-        <g key={tickValue} transform={`translate(${xScale(tickValue)},${0})`}>
+        <g
+          key={tickValue}
+          transform={`translate(${xScale(tickValue)},${0})`}
+          className="fill-sky-800 stroke-neutral-400"
+        >
           <line y2={innerHeight} stroke="black" className="stroke-slate-400" />
           <text
             dy="20"
             y={innerHeight}
             style={{ textAnchor: "middle" }}
-            className="text-sm font-medium fill-sky-800"
+            className="text-sm font-medium"
           >
             {tickFormat ? tickFormat(tickValue) : tickValue}
           </text>
@@ -44,6 +48,7 @@ export function AxisLeft({
           <text
             transform={`translate(0,${yScale(tickValue)!})`}
             dx="-0.5em"
+            dy={3}
             style={{ textAnchor: "end" }}
             className="text-sm font-medium"
           >
