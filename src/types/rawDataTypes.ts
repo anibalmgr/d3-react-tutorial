@@ -1,3 +1,11 @@
+export interface IrisType {
+  sepal_length: number;
+  sepal_width: number;
+  petal_length: number;
+  petal_width: number;
+  species: "setosa" | "sersicolor" | "virginica";
+}
+
 export interface PopulationType {
   1950: string;
   1951: string;
