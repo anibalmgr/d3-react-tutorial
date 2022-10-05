@@ -20,7 +20,9 @@ export function Marks({ data, xScale, yScale, yValue, xValue }: Props) {
           r="10"
           className="fill-sky-800 hover:fill-sky-700"
         >
-          <title className="bg-slate-900 p-4 text-3xl">{xValue(d)}</title>
+          <title className="bg-slate-900 p-4 text-3xl">
+            x: {xValue(d)}, y: {yValue(d)}
+          </title>
         </circle>
       ))}
     </>
