@@ -43,7 +43,7 @@ export default function BarChart() {
     .range([0, innerWidth]);
 
   return (
-    <svg width={width} height={height + 40}>
+    <svg width={width} height={height + 80}>
       <g transform={`translate(${margin.left}, ${margin.top})`}>
         <AxisBottom
           xScale={xScale}
