@@ -1,7 +1,7 @@
-import { ScaleLinear } from "d3";
+import { ScaleLinear, ScaleTime } from "d3";
 
 interface Props {
-  xScale: ScaleLinear<number, number, never>;
+  xScale: ScaleTime<number, number, never>;
   innerHeight: number;
   tickFormat?: Function;
 }
@@ -11,7 +11,7 @@ export function AxisBottom({ xScale, innerHeight, tickFormat }: Props) {
     <>
       {xScale.ticks().map((tickValue) => (
         <g
-          key={tickValue}
+          key={tickValue.toLocaleDateString()}
           transform={`translate(${xScale(tickValue)},${0})`}
           className="fill-sky-800 stroke-neutral-400"
         >
